@@ -1,7 +1,9 @@
+const isProd = process.env.NODE_ENV === 'production';
 const withImages = require('next-images');
 module.exports = withImages();
 
 module.exports = {
+  assetPrefix: isProd ? 'https://cdn.mydomain.com' : '',
   env: {
     MOCK_PUBLIC_BASE_API: process.env.MOCK_PUBLIC_BASE_API,
     PUBLIC_BASE_API: process.env.PUBLIC_BASE_API,
