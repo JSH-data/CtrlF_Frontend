@@ -5,7 +5,7 @@ function Login() {
   return (
     <div className="component">
       <Head>
-        <title>로그인</title>
+        <title>LOGIN</title>
         <meta name="description"></meta>
       </Head>
       <LoginForm></LoginForm>
