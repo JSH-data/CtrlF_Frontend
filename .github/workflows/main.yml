@@ -44,4 +44,6 @@ jobs:
 
       - name: invalidation
         run: |
-          aws cloudfront create-invalidation --distribution-id EC0D4XVBG9NWP --paths "/*"
+          aws cloudfront create-invalidation \
+            --distribution-id EC0D4XVBG9NWP \
+            --paths "/*"
