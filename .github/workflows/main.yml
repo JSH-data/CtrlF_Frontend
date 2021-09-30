@@ -28,20 +28,20 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
-      - name: S3 Delete
-        run: |
-          aws s3 rm \
-            --recursive \
-            --region ap-northeast-2 \
-            s3://ctrlf.space
+      # - name: S3 Delete
+      #   run: |
+      #     aws s3 rm \
+      #       --recursive \
+      #       --region ap-northeast-2 \
+      #       s3://ctrlf.space
 
-      - name: deploy
-        run: |
-          aws s3 cp \
-            --recursive \
-            --region ap-northeast-2 \
-            out s3://ctrlf.space
+      # - name: deploy
+      #   run: |
+      #     aws s3 cp \
+      #       --recursive \
+      #       --region ap-northeast-2 \
+      #       out s3://ctrlf.space
 
-      - name: in
-        run: \
+      - name: invalidation
+        run: |
           aws cloudfront create-invalidation --distribution-id EC0D4XVBG9NWP --paths "/*"
