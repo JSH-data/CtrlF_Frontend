@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # aa
       - name: git clone
         uses: actions/checkout@v2
 
